@@ -1,3 +1,10 @@
+# oneinfl 1.0.1 (2025-02-12)
+
+## Bug Fixes
+
+- Resolved an error that necessitated changes to `margins.R`, `dEdq_nb.R`, and `dEdq_pois.R`.
+- Changed the spacing in the printed table from the `margins.R` function.
+
 # oneinfl 1.0.0 (2025-02-04)
 
 ## Initial CRAN Release

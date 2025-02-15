@@ -1,7 +1,7 @@
 Type: Package
 Package: oneinfl
 Title: Estimates OIPP and OIZTNB Regression Models
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: 
     person("Ryan T.", "Godwin", , "ryan.godwin@umanitoba.ca", role = c("aut", "cre"))
 Author: Ryan T. Godwin [aut, cre]
@@ -20,7 +20,7 @@ License: GPL (>= 3)
 Imports: graphics, stats
 Encoding: UTF-8
 NeedsCompilation: no
-Packaged: 2025-02-06 03:39:21 UTC; ryang
+Packaged: 2025-02-15 05:05:46 UTC; ryang
 RoxygenNote: 7.3.2
 Repository: CRAN
-Date/Publication: 2025-02-06 19:40:02 UTC
+Date/Publication: 2025-02-15 05:20:02 UTC

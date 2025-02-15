@@ -42,8 +42,9 @@ dEdq_nb <- function(b, g, a, X, Z, dummies, formula) {
   
   vars <- attr(terms(formula), "term.labels")
   expanded_vars <- unlist(strsplit(vars, "\\|"))
-  expanded_vars <- trimws(expanded_vars)
-  num_unique <- length(unique(expanded_vars))
+  expanded_vars <- unlist(strsplit(expanded_vars, "\\+"))
+  expanded_vars <- unique(trimws(expanded_vars))
+  num_unique <- length(expanded_vars)
   
   dldq <- dzdq <- matrix(, nrow(X), num_unique)
   colnames(dldq) <- colnames(dzdq) <- expanded_vars
