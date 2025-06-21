@@ -11,31 +11,29 @@ dEdq_nb_noinfl(b, a, X, dummies, formula)
 
 \item{a}{Numeric scalar, the overdispersion parameter of the negative binomial distribution.}
 
-\item{X}{Matrix of predictors for the model, where rows correspond to observations
+\item{X}{Matrix of predictors for the model, where rows correspond to observations 
 and columns to covariates.}
 
-\item{dummies}{Character vector of column names from \code{X} that are considered
+\item{dummies}{Character vector of column names from `X` that are considered 
 dummy variables for which marginal effects need to be computed.}
 }
 \value{
-A matrix of partial derivatives (or marginal effects) with rows corresponding to observations
-and columns to covariates. Marginal effects for dummy variables are calculated by contrasting
+A matrix of partial derivatives (or marginal effects) with rows corresponding to observations 
+and columns to covariates. Marginal effects for dummy variables are calculated by contrasting 
 expected values when the dummy variable is set to 0 versus 1.
 }
 \description{
-This internal function calculates the partial derivatives of expected values
-for a regular truncated negative binomial regression model with respect to covariates.
+This internal function calculates the partial derivatives of expected values 
+for a regular truncated negative binomial regression model with respect to covariates. 
 It also adjusts for marginal effects of dummy variables when specified.
 }
 \details{
 This function performs the following tasks:
-\itemize{
-\item Computes partial derivatives of expected values with respect to covariates in \code{X}.
-\item Adjusts for marginal effects of dummy variables by altering their values in the design matrix
-and computing the difference in expected values.
-}
+- Computes partial derivatives of expected values with respect to covariates in `X`.
+- Adjusts for marginal effects of dummy variables by altering their values in the design matrix 
+  and computing the difference in expected values.
 
-It is designed for internal use and assumes correct input structure. Improper inputs may result
+It is designed for internal use and assumes correct input structure. Improper inputs may result 
 in errors or unexpected behavior.
 }
 \seealso{

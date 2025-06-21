@@ -19,29 +19,29 @@ roipp(b, g, X, Z)
 A numeric vector of simulated count data.
 }
 \description{
-Simulates count data from a one-inflated Poisson process using specified parameters
+Simulates count data from a one-inflated Poisson process using specified parameters 
 for the rate and one-inflation components.
 }
 \details{
-This function generates count data from a one-inflated Poisson process. The process
+This function generates count data from a one-inflated Poisson process. The process 
 combines:
 \itemize{
-\item A Poisson distribution for counts greater than one.
-\item A one-inflation component that adjusts the probability of observing a count of one.
+  \item A Poisson distribution for counts greater than one.
+  \item A one-inflation component that adjusts the probability of observing a count of one.
 }
 
 The algorithm:
 \enumerate{
-\item Calculates the rate parameter (\eqn{\lambda}) as \eqn{\exp(X \cdot b)}.
-\item Computes the one-inflation probabilities (\eqn{\omega}) based on \eqn{Z \cdot g}.
-\item Simulates counts for each observation:
-\itemize{
-\item Draws a random number to determine whether the count is one.
-\item Iteratively calculates probabilities for higher counts until the random number is matched.
-}
+  \item Calculates the rate parameter (\eqn{\lambda}) as \eqn{\exp(X \cdot b)}.
+  \item Computes the one-inflation probabilities (\eqn{\omega}) based on \eqn{Z \cdot g}.
+  \item Simulates counts for each observation:
+    \itemize{
+      \item Draws a random number to determine whether the count is one.
+      \item Iteratively calculates probabilities for higher counts until the random number is matched.
+    }
 }
 
-This function is useful for generating synthetic data for testing or simulation studies involving
+This function is useful for generating synthetic data for testing or simulation studies involving 
 one-inflated Poisson models.
 }
 \examples{

@@ -11,14 +11,14 @@ E_negbin_noinfl(b, a, X)
 
 \item{a}{Numeric scalar, the overdispersion parameter of the negative binomial distribution.}
 
-\item{X}{Matrix of predictors for the model, where rows correspond to observations
+\item{X}{Matrix of predictors for the model, where rows correspond to observations 
 and columns to covariates.}
 }
 \value{
 A numeric vector of expected values for each observation in the dataset.
 }
 \description{
-Computes the expected value from a zero-truncated negative binomial (ZTNB) distribution
+Computes the expected value from a zero-truncated negative binomial (ZTNB) distribution 
 based on the model parameters and covariates.
 }
 \seealso{

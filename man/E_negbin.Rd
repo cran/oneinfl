@@ -13,16 +13,16 @@ E_negbin(b, g, a, X, Z)
 
 \item{a}{Numeric scalar, the overdispersion parameter of the negative binomial distribution.}
 
-\item{X}{Matrix of predictors for the main model, where rows correspond to observations
+\item{X}{Matrix of predictors for the main model, where rows correspond to observations 
 and columns to covariates.}
 
-\item{Z}{Matrix of predictors for the one-inflation process, structured similarly to \code{X}.}
+\item{Z}{Matrix of predictors for the one-inflation process, structured similarly to `X`.}
 }
 \value{
 A numeric vector of expected values for each observation in the dataset.
 }
 \description{
-Computes the expected value from a one-inflated, zero-truncated negative binomial (OIZTNB) distribution.
+Computes the expected value from a one-inflated, zero-truncated negative binomial (OIZTNB) distribution. 
 This function calculates the expected value based on the model parameters and covariates.
 }
 \seealso{

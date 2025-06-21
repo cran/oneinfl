@@ -31,7 +31,7 @@
 #' @seealso
 #' \code{\link{model.matrix}}, \code{\link{model.frame}}, \code{\link{model.response}}
 #' 
-#' @keywords internal
+#' @export
 
 makeXZy <- function(formula, df) {
   if (formula[[3]] == 1) {

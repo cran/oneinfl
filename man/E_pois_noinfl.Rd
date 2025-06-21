@@ -9,7 +9,7 @@ E_pois_noinfl(b, X)
 \arguments{
 \item{b}{Numeric vector of coefficients for the Poisson model.}
 
-\item{X}{Matrix of predictors for the Poisson model, where rows correspond
+\item{X}{Matrix of predictors for the Poisson model, where rows correspond 
 to observations and columns to covariates.}
 }
 \value{

@@ -15,19 +15,19 @@ rpp(b, X)
 A numeric vector of simulated count data.
 }
 \description{
-Simulates count data from a zero-truncated Poisson process using specified parameters
+Simulates count data from a zero-truncated Poisson process using specified parameters 
 for the rate component.
 }
 \details{
-This function generates count data from a zero-truncated Poisson process, which models
+This function generates count data from a zero-truncated Poisson process, which models 
 count data without zeros. The process involves:
 \itemize{
-\item Calculating the rate parameter (\eqn{\lambda}) as \eqn{\exp(X \cdot b)}.
-\item Iteratively computing probabilities for counts starting from 1 and adding to the cumulative
-probability until a randomly drawn value is matched.
+  \item Calculating the rate parameter (\eqn{\lambda}) as \eqn{\exp(X \cdot b)}.
+  \item Iteratively computing probabilities for counts starting from 1 and adding to the cumulative 
+    probability until a randomly drawn value is matched.
 }
 
-This function is useful for generating synthetic data for testing or simulation studies involving
+This function is useful for generating synthetic data for testing or simulation studies involving 
 zero-truncated Poisson models.
 }
 \examples{

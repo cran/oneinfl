@@ -7,39 +7,37 @@
 oneLRT(mod0, mod1)
 }
 \arguments{
-\item{mod0}{A model object (typically the simpler model) estimated using
+\item{mod0}{A model object (typically the simpler model) estimated using 
 \code{\link{oneinfl}} or \code{\link{truncreg}}.}
 
-\item{mod1}{A model object (typically the more complex model) estimated using
+\item{mod1}{A model object (typically the more complex model) estimated using 
 \code{\link{oneinfl}} or \code{\link{truncreg}}.}
 }
 \value{
 A list with the following components:
-\describe{
-\item{\code{LRTstat}}{The likelihood ratio test statistic.}
-\item{\code{pval}}{The p-value associated with the test statistic, based
-on a chi-squared distribution.}
-}
+  \describe{
+    \item{\code{LRTstat}}{The likelihood ratio test statistic.}
+    \item{\code{pval}}{The p-value associated with the test statistic, based 
+      on a chi-squared distribution.}
+  }
 }
 \description{
-Performs a likelihood ratio test (LRT) to compare two nested models estimated by
-\code{\link{oneinfl}} or \code{\link{truncreg}}. It calculates the LRT statistic
-and its associated p-value, testing whether the more complex model provides
+Performs a likelihood ratio test (LRT) to compare two nested models estimated by 
+\code{\link{oneinfl}} or \code{\link{truncreg}}. It calculates the LRT statistic 
+and its associated p-value, testing whether the more complex model provides 
 a significantly better fit to the data than the simpler model.
 }
 \details{
-The function extracts the log-likelihoods and number of parameters from the two
+The function extracts the log-likelihoods and number of parameters from the two 
 models. It then calculates the LRT statistic:
 \deqn{-2 \cdot (\ell_0 - \ell_1)}
-where \eqn{\ell_0} and \eqn{\ell_1} are the log-likelihoods of the simpler and
-more complex models, respectively. The degrees of freedom for the test are
+where \eqn{\ell_0} and \eqn{\ell_1} are the log-likelihoods of the simpler and 
+more complex models, respectively. The degrees of freedom for the test are 
 equal to the difference in the number of parameters between the models.
 
 The likelihood ratio test is commonly used to test for:
-\itemize{
-\item \emph{Overdispersion}: Comparing a Poisson model to a negative binomial model.
-\item \emph{One-inflation}: Comparing a one-inflated model to a non-one-inflated model.
-}
+- \emph{Overdispersion}: Comparing a Poisson model to a negative binomial model.
+- \emph{One-inflation}: Comparing a one-inflated model to a non-one-inflated model.
 }
 \examples{
 

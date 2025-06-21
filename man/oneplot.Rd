@@ -16,8 +16,8 @@ oneplot(
 )
 }
 \arguments{
-\item{model1}{The first fitted model object, either a one-inflated model (class \code{"oneinflmodel"})
-or a truncated model (class \code{"truncmodel"}).}
+\item{model1}{The first fitted model object, either a one-inflated model (class `"oneinflmodel"`) 
+or a truncated model (class `"truncmodel"`).}
 
 \item{model2}{Optional. A second fitted model object, structured similarly to \code{model1}.}
 
@@ -37,21 +37,21 @@ or a truncated model (class \code{"truncmodel"}).}
 A plot is generated but no values are returned.
 }
 \description{
-Generates a bar plot of observed count data and overlays predicted values
+Generates a bar plot of observed count data and overlays predicted values 
 from one or more models fitted using \code{\link{oneinfl}} or \code{\link{truncreg}}.
 }
 \details{
-This function visualizes observed count data as a bar plot and overlays predicted
-values from up to four models. The function automatically detects the type of model
-(Poisson or negative binomial; one-inflated or truncated) and adjusts the plot accordingly.
+This function visualizes observed count data as a bar plot and overlays predicted 
+values from up to four models. The function automatically detects the type of model 
+(Poisson or negative binomial; one-inflated or truncated) and adjusts the plot accordingly. 
 Predictions are generated using the \code{\link{pred}} function.
 
 Model types are distinguished by different point and line styles:
 \itemize{
-\item Poisson (PP): Dark magenta, triangle-down
-\item Zero-truncated negative binomial (ZTNB): Red, diamond
-\item One-inflated Poisson (OIPP): Green, triangle-up
-\item One-inflated zero-truncated negative binomial (OIZTNB): Blue, circle
+  \item Poisson (PP): Dark magenta, triangle-down
+  \item Zero-truncated negative binomial (ZTNB): Red, diamond
+  \item One-inflated Poisson (OIPP): Green, triangle-up
+  \item One-inflated zero-truncated negative binomial (OIZTNB): Blue, circle
 }
 
 The legend in the top-right corner of the plot indicates the models displayed.

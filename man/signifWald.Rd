@@ -14,22 +14,22 @@ signifWald(model, varname)
 \value{
 A list with the following components:
 \describe{
-\item{\code{W}}{The Wald test statistic.}
-\item{\code{pval}}{The p-value associated with the test statistic, based
-on a chi-squared distribution with 2 degrees of freedom.}
+  \item{\code{W}}{The Wald test statistic.}
+  \item{\code{pval}}{The p-value associated with the test statistic, based 
+    on a chi-squared distribution with 2 degrees of freedom.}
 }
 }
 \description{
-Performs a Wald test to evaluate the joint significance of a predictor variable in both
+Performs a Wald test to evaluate the joint significance of a predictor variable in both 
 the rate and one-inflation components of a model.
 }
 \details{
-This function tests the null hypothesis that the coefficients for the specified predictor
-variable are jointly equal to zero in both the rate (\code{beta}) and one-inflation
+This function tests the null hypothesis that the coefficients for the specified predictor 
+variable are jointly equal to zero in both the rate (\code{beta}) and one-inflation 
 (\code{gamma}) components of the model. The test statistic is calculated as:
 \deqn{W = \mathbf{c}^\top V^{-1} \mathbf{c}}
-where \eqn{\mathbf{c}} is the vector of coefficients for the predictor in the rate and
-one-inflation components, and \eqn{V} is their variance-covariance matrix. The p-value is
+where \eqn{\mathbf{c}} is the vector of coefficients for the predictor in the rate and 
+one-inflation components, and \eqn{V} is their variance-covariance matrix. The p-value is 
 computed using a chi-squared distribution with 2 degrees of freedom.
 }
 \examples{

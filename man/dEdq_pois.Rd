@@ -11,33 +11,31 @@ dEdq_pois(b, g, X, Z, dummies, formula)
 
 \item{g}{Numeric vector of coefficients for the one-inflation process.}
 
-\item{X}{Matrix of predictors for the main Poisson model, where rows correspond
+\item{X}{Matrix of predictors for the main Poisson model, where rows correspond 
 to observations and columns to covariates.}
 
-\item{Z}{Matrix of predictors for the one-inflation process, structured similarly to \code{X}.}
+\item{Z}{Matrix of predictors for the one-inflation process, structured similarly to `X`.}
 
-\item{dummies}{Character vector of column names from \code{X} and \code{Z} that are treated
+\item{dummies}{Character vector of column names from `X` and `Z` that are treated 
 as dummy variables for which marginal effects are computed.}
 }
 \value{
-A matrix of partial derivatives (or marginal effects) with rows corresponding to observations
-and columns to covariates. For dummy variables, marginal effects are calculated by contrasting
+A matrix of partial derivatives (or marginal effects) with rows corresponding to observations 
+and columns to covariates. For dummy variables, marginal effects are calculated by contrasting 
 expected values when the dummy is set to 0 versus 1.
 }
 \description{
-This internal function calculates the partial derivatives of expected values
-for a one-inflated Poisson regression model with respect to covariates.
+This internal function calculates the partial derivatives of expected values 
+for a one-inflated Poisson regression model with respect to covariates. 
 It also computes marginal effects for specified dummy variables.
 }
 \details{
 This function:
-\itemize{
-\item Computes partial derivatives of expected values with respect to covariates in \code{X} and \code{Z}.
-\item Handles marginal effects for dummy variables by modifying their values in the design matrices
-and computing the difference in expected values.
-}
+- Computes partial derivatives of expected values with respect to covariates in `X` and `Z`.
+- Handles marginal effects for dummy variables by modifying their values in the design matrices 
+  and computing the difference in expected values.
 
-It is designed for internal use and assumes correct input structure. Improper inputs may result
+It is designed for internal use and assumes correct input structure. Improper inputs may result 
 in errors or unexpected behavior.
 }
 \seealso{

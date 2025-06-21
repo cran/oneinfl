@@ -11,16 +11,16 @@ E_pois(b, g, X, Z)
 
 \item{g}{Numeric vector of coefficients for the one-inflation process.}
 
-\item{X}{Matrix of predictors for the main Poisson model, where rows correspond
+\item{X}{Matrix of predictors for the main Poisson model, where rows correspond 
 to observations and columns to covariates.}
 
-\item{Z}{Matrix of predictors for the one-inflation process, structured similarly to \code{X}.}
+\item{Z}{Matrix of predictors for the one-inflation process, structured similarly to `X`.}
 }
 \value{
 A numeric vector of expected values for each observation in the dataset.
 }
 \description{
-Computes the expected value from a one-inflated Poisson (OIPP) distribution
+Computes the expected value from a one-inflated Poisson (OIPP) distribution 
 based on the model parameters and covariates.
 }
 \seealso{

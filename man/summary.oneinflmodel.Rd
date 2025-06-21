@@ -7,28 +7,26 @@
 \method{summary}{oneinflmodel}(object, ...)
 }
 \arguments{
-\item{object}{A model object of class \code{"oneinflmodel"} (for one-inflated models).}
+\item{object}{A model object of class `"oneinflmodel"` (for one-inflated models).}
 
 \item{...}{Additional arguments (currently unused).}
 }
 \value{
-Prints a summary table of coefficients, standard errors, z-values, p-values,
+Prints a summary table of coefficients, standard errors, z-values, p-values, 
 significance codes, one-inflation probabilities, and log-likelihood.
 }
 \description{
-Provides a summary of the fitted model, including estimated coefficients, standard errors,
+Provides a summary of the fitted model, including estimated coefficients, standard errors, 
 significance levels, and other relevant statistics.
 }
 \details{
 This function generates a detailed summary of the fitted model, including:
-\itemize{
-\item Estimated coefficients for the rate component (\code{beta}).
-\item Estimated coefficients for the one-inflation component (\code{gamma}).
-\item Standard errors.
-\item z-statistics, associated p-values, and corresponding significance codes.
-\item Average, and average absolute, one-inflation.
-\item Log-likelihood of the fitted model.
-}
+- Estimated coefficients for the rate component (\code{beta}).
+- Estimated coefficients for the one-inflation component (\code{gamma}).
+- Standard errors.
+- z-statistics, associated p-values, and corresponding significance codes.
+- Average, and average absolute, one-inflation.
+- Log-likelihood of the fitted model.
 }
 \examples{
 # Example usage

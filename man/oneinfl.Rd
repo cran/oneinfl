@@ -7,29 +7,29 @@
 oneinfl(formula, df, dist = "negbin", start = NULL, method = "BFGS")
 }
 \arguments{
-\item{formula}{A symbolic description of the model to be fitted. Variables before the pipe \code{|} link to the usual Poisson rate parameter, after the pipe link to the one-inflation parameter.}
+\item{formula}{A symbolic description of the model to be fitted. Variables before the pipe `|` link to the usual Poisson rate parameter, after the pipe link to the one-inflation parameter.}
 
 \item{df}{A data frame containing the variables in the model.}
 
-\item{dist}{A character string specifying the distribution to use. Options are \code{"Poisson"} or \code{"negbin"}.}
+\item{dist}{A character string specifying the distribution to use. Options are `"Poisson"` or `"negbin"`.}
 
-\item{start}{Optional. A numeric vector of starting values for the optimization process. Defaults to \code{NULL}, in which case starting values are attempted to be chosen automatically.}
+\item{start}{Optional. A numeric vector of starting values for the optimization process. Defaults to `NULL`, in which case starting values are attempted to be chosen automatically.}
 
-\item{method}{A character string specifying the optimization method to be passed to \code{\link[stats]{optim}}. Defaults to \code{"BFGS"}.}
+\item{method}{A character string specifying the optimization method to be passed to \code{\link[stats]{optim}}. Defaults to `"BFGS"`.}
 }
 \value{
-An object of class \code{"oneinflmodel"} containing the following components:
-\describe{
-\item{\code{beta}}{Estimated coefficients for the rate component of the model.}
-\item{\code{gamma}}{Estimated coefficients for the one-inflation component of the model.}
-\item{\code{alpha}}{Dispersion parameter (only for negative binomial distribution).}
-\item{\code{vc}}{Variance-covariance matrix of the estimated parameters.}
-\item{\code{logl}}{Log-likelihood of the fitted model.}
-\item{\code{avgw}}{Average one-inflation probability.}
-\item{\code{absw}}{Mean absolute one-inflation probability.}
-\item{\code{dist}}{The distribution used for the model ("Poisson" or "negbin").}
-\item{\code{formula}}{The formula used for the model.}
-}
+An object of class `"oneinflmodel"` containing the following components:
+  \describe{
+    \item{\code{beta}}{Estimated coefficients for the rate component of the model.}
+    \item{\code{gamma}}{Estimated coefficients for the one-inflation component of the model.}
+    \item{\code{alpha}}{Dispersion parameter (only for negative binomial distribution).}
+    \item{\code{vc}}{Variance-covariance matrix of the estimated parameters.}
+    \item{\code{logl}}{Log-likelihood of the fitted model.}
+    \item{\code{avgw}}{Average one-inflation probability.}
+    \item{\code{absw}}{Mean absolute one-inflation probability.}
+    \item{\code{dist}}{The distribution used for the model ("Poisson" or "negbin").}
+    \item{\code{formula}}{The formula used for the model.}
+  }
 }
 \description{
 Fits a one-inflated positive Poisson (OIPP) or one-inflated zero-truncated negative binomial (OIZTNB) regression model.
@@ -38,10 +38,8 @@ Fits a one-inflated positive Poisson (OIPP) or one-inflated zero-truncated negat
 This function fits a regression model for one-inflated counts. One-inflated models are used when there are an excess number of ones, relative to a Poisson or negative binomial process.
 
 The function supports two distributions:
-\itemize{
-\item \code{"Poisson"}: One-inflated Poisson regression.
-\item \code{"negbin"}: One-inflated negative binomial regression.
-}
+- `"Poisson"`: One-inflated Poisson regression.
+- `"negbin"`: One-inflated negative binomial regression.
 
 The function uses numerical optimization via \code{\link[stats]{optim}} to estimate the parameters.
 }
@@ -59,7 +57,7 @@ predict(model, df=df)
 \code{\link{summary}} for summarizing the fitted model.
 \code{\link{margins}} for calculating the marginal effects of regressors.
 \code{\link{oneWald}} to test for no one-inflation.
-\code{\link{signifWald}} for testing the joint significance of a single regressor that appears before and after the pipe \code{|}.
+\code{\link{signifWald}} for testing the joint significance of a single regressor that appears before and after the pipe `|`.
 \code{\link{oneplot}} for plotting actual and predicted counts.
 \code{\link{predict}} for expected response/dependent variable at each observation.
 \code{\link{truncreg}} for fitting positive Poisson (PP) and zero-truncated negative binomial (ZTNB) models.

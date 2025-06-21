@@ -7,37 +7,37 @@
 pred(model, df, maxpred)
 }
 \arguments{
-\item{model}{A fitted model object, either a one-inflated model (class \code{"oneinflmodel"})
-or a truncated model (class \code{"truncmodel"}).}
+\item{model}{A fitted model object, either a one-inflated model (class `"oneinflmodel"`) 
+or a truncated model (class `"truncmodel"`).}
 
 \item{df}{A data frame containing the variables used in the model.}
 
-\item{maxpred}{Optional. The maximum count value for which predictions are generated.
+\item{maxpred}{Optional. The maximum count value for which predictions are generated. 
 Defaults to the maximum observed count in \code{df}.}
 }
 \value{
 A numeric vector of predicted frequencies for count values from 1 to \code{maxpred}.
 }
 \description{
-Computes the predicted frequencies for a specified model, given the observed data and
-maximum count value. This function supports models estimated using \code{\link{oneinfl}}
+Computes the predicted frequencies for a specified model, given the observed data and 
+maximum count value. This function supports models estimated using \code{\link{oneinfl}} 
 or \code{\link{truncreg}}.
 }
 \details{
-The function computes predicted frequencies based on the type of model and its
+The function computes predicted frequencies based on the type of model and its 
 distribution:
 \itemize{
-\item \strong{PP (Poisson, zero-truncated):} Computes predictions for a
-zero-truncated Poisson model.
-\item \strong{ZTNB (Negative Binomial, zero-truncated):} Computes predictions
-for a zero-truncated negative binomial model.
-\item \strong{OIPP (Poisson, one-inflated):} Computes predictions for a
-one-inflated Poisson model.
-\item \strong{OIZTNB (Negative Binomial, one-inflated, zero-truncated):} Computes
-predictions for a one-inflated, zero-truncated negative binomial model.
+  \item \strong{PP (Poisson, zero-truncated):} Computes predictions for a 
+    zero-truncated Poisson model.
+  \item \strong{ZTNB (Negative Binomial, zero-truncated):} Computes predictions 
+    for a zero-truncated negative binomial model.
+  \item \strong{OIPP (Poisson, one-inflated):} Computes predictions for a 
+    one-inflated Poisson model.
+  \item \strong{OIZTNB (Negative Binomial, one-inflated, zero-truncated):} Computes 
+    predictions for a one-inflated, zero-truncated negative binomial model.
 }
 
-The predictions are generated for count values from 1 to \code{maxpred}. For one-inflated
+The predictions are generated for count values from 1 to \code{maxpred}. For one-inflated 
 models, the predictions account for the one-inflation probabilities.
 
 This is an internal function primarily used by \code{\link{oneplot}} for visualization purposes.

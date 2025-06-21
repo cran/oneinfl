@@ -7,26 +7,24 @@
 \method{summary}{truncmodel}(object, ...)
 }
 \arguments{
-\item{object}{A model object of class \code{"truncmodel"} (for truncated models).}
+\item{object}{A model object of class `"truncmodel"` (for truncated models).}
 
 \item{...}{Additional arguments (currently unused).}
 }
 \value{
-Prints a summary table of coefficients, standard errors, z-values, p-values,
+Prints a summary table of coefficients, standard errors, z-values, p-values, 
 significance codes, and log-likelihood.
 }
 \description{
-Provides a summary of the fitted model, including estimated coefficients, standard errors,
+Provides a summary of the fitted model, including estimated coefficients, standard errors, 
 significance levels, and other relevant statistics.
 }
 \details{
 This function generates a detailed summary of the fitted model, including:
-\itemize{
-\item Estimated coefficients for the rate component (\code{beta}).
-\item Standard errors.
-\item z-statistics, associated p-values, and corresponding significance codes.
-\item Log-likelihood of the fitted model.
-}
+- Estimated coefficients for the rate component (\code{beta}).
+- Standard errors.
+- z-statistics, associated p-values, and corresponding significance codes.
+- Log-likelihood of the fitted model.
 }
 \examples{
 # Example usage

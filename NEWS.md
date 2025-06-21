@@ -1,5 +1,9 @@
 # oneinfl 1.0.1 (2025-02-12)
 
+Made the `makeXZy()` function external.
+
+# oneinfl 1.0.1 (2025-02-12)
+
 ## Bug Fixes
 
 - Resolved an error that necessitated changes to `margins.R`, `dEdq_nb.R`, and `dEdq_pois.R`.

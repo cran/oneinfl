@@ -7,20 +7,20 @@
 \method{predict}{oneinflmodel}(object, ...)
 }
 \arguments{
-\item{object}{An object of class \code{oneinflmodel}}
+\item{object}{An object of class `oneinflmodel`}
 
-\item{...}{Additional argument \code{df}, a data frame used to calculate the expected
+\item{...}{Additional argument `df`, a data frame used to calculate the expected
 value of the response variable.}
 }
 \value{
 A numeric vector of predicted expected responses for the observations in \code{df}.
 }
 \description{
-Calculates the predicted expected response for a model fitted using
+Calculates the predicted expected response for a model fitted using 
 \code{\link{oneinfl}} or \code{\link{truncreg}}.
 }
 \details{
-This function computes the expected response based on the fitted model. The computation
+This function computes the expected response based on the fitted model. The computation 
 differs depending on the distribution. For \code{Poisson (OIPP)}, predicted values are
 computed using \code{\link{E_pois}}. For \code{Negative Binomial (OIZTNB)}, predicted
 values are computed using \code{\link{E_negbin}}.

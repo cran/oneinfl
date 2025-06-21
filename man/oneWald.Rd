@@ -7,32 +7,32 @@
 oneWald(model)
 }
 \arguments{
-\item{model}{A model object of class \code{"oneinflmodel"} estimated using
-\code{\link{oneinfl}}. The model must include one-inflation parameters (\code{gamma})
+\item{model}{A model object of class \code{"oneinflmodel"} estimated using 
+\code{\link{oneinfl}}. The model must include one-inflation parameters (\code{gamma}) 
 and a variance-covariance matrix (\code{vc}).}
 }
 \value{
 A list with the following components:
-\describe{
-\item{\code{W}}{The Wald test statistic.}
-\item{\code{pval}}{The p-value associated with the test statistic, based
-on a chi-squared distribution.}
-}
+  \describe{
+    \item{\code{W}}{The Wald test statistic.}
+    \item{\code{pval}}{The p-value associated with the test statistic, based 
+      on a chi-squared distribution.}
+  }
 }
 \description{
-Performs a Wald test to evaluate the significance of the one-inflation parameters
+Performs a Wald test to evaluate the significance of the one-inflation parameters 
 in a model estimated using \code{\link{oneinfl}}.
 }
 \details{
-The Wald test evaluates the null hypothesis that all one-inflation parameters
-(\code{gamma}) are equal to zero, indicating no one-inflation. The test statistic
+The Wald test evaluates the null hypothesis that all one-inflation parameters 
+(\code{gamma}) are equal to zero, indicating no one-inflation. The test statistic 
 is calculated as:
 \deqn{W = \gamma^\top V^{-1} \gamma}
-where \eqn{\gamma} is the vector of one-inflation parameters and \eqn{V} is their
-variance-covariance matrix. The p-value is computed using a chi-squared distribution
+where \eqn{\gamma} is the vector of one-inflation parameters and \eqn{V} is their 
+variance-covariance matrix. The p-value is computed using a chi-squared distribution 
 with degrees of freedom equal to the length of \eqn{\gamma}.
 
-This test is commonly used to determine whether a one-inflated model provides
+This test is commonly used to determine whether a one-inflated model provides 
 a significantly better fit than a non-one-inflated counterpart.
 }
 \examples{

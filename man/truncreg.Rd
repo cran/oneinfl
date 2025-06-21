@@ -11,22 +11,22 @@ truncreg(formula, df, dist = "negbin", start = NULL, method = "BFGS")
 
 \item{df}{A data frame containing the variables in the model.}
 
-\item{dist}{A character string specifying the distribution to use. Options are \code{"Poisson"} or \code{"negbin"}.}
+\item{dist}{A character string specifying the distribution to use. Options are `"Poisson"` or `"negbin"`.}
 
-\item{start}{Optional. A numeric vector of starting values for the optimization process. Defaults to \code{NULL}, in which case starting values are attempted to be chosen automatically.}
+\item{start}{Optional. A numeric vector of starting values for the optimization process. Defaults to `NULL`, in which case starting values are attempted to be chosen automatically.}
 
-\item{method}{A character string specifying the optimization method to be passed to \code{\link[stats]{optim}}. Defaults to \code{"BFGS"}.}
+\item{method}{A character string specifying the optimization method to be passed to \code{\link[stats]{optim}}. Defaults to `"BFGS"`.}
 }
 \value{
-An object of class \code{"truncmodel"} containing the following components:
-\describe{
-\item{\code{beta}}{Estimated coefficients for the regression model.}
-\item{\code{alpha}}{Dispersion parameter (only for negative binomial distribution).}
-\item{\code{vc}}{Variance-covariance matrix of the estimated parameters.}
-\item{\code{logl}}{Log-likelihood of the fitted model.}
-\item{\code{dist}}{The distribution used for the model ("Poisson" or "negbin").}
-\item{\code{formula}}{The formula used for the model.}
-}
+An object of class `"truncmodel"` containing the following components:
+  \describe{
+    \item{\code{beta}}{Estimated coefficients for the regression model.}
+    \item{\code{alpha}}{Dispersion parameter (only for negative binomial distribution).}
+    \item{\code{vc}}{Variance-covariance matrix of the estimated parameters.}
+    \item{\code{logl}}{Log-likelihood of the fitted model.}
+    \item{\code{dist}}{The distribution used for the model ("Poisson" or "negbin").}
+    \item{\code{formula}}{The formula used for the model.}
+  }
 }
 \description{
 Fits a positive Poisson (PP) or zero-truncated negative binomial (ZTNB) regression model.
@@ -35,10 +35,8 @@ Fits a positive Poisson (PP) or zero-truncated negative binomial (ZTNB) regressi
 This function fits a regression model for zero-truncated counts. Zero-truncated models are used when the count data does not include zeros, such as in cases where only positive counts are observed.
 
 The function supports two distributions:
-\itemize{
-\item \code{"Poisson"}: Zero-truncated Poisson regression.
-\item \code{"negbin"}: Zero-truncated negative binomial regression.
-}
+- `"Poisson"`: Zero-truncated Poisson regression.
+- `"negbin"`: Zero-truncated negative binomial regression.
 
 The function uses numerical optimization via \code{\link[stats]{optim}} to estimate the parameters.
 }
